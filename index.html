@@ -17,7 +17,7 @@
   <!-- ── Navbar ── -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
-      <img src="assets/sparkles/whiteSparkle.png" alt="" class="nav-star" />
+      <img src="assets/sparkles/whiteSparkle.png" loading="lazy" alt="" class="nav-star" />
       <span>Joud</span>
     </div>
     <div class="nav-links">
@@ -37,19 +37,19 @@
       <div class="hero-buttons">
         <a href="https://github.com/Joudii18" class="hero-btn" target="_blank" rel="noreferrer">
           <span class="btn-icon github-icon">
-            <img src="assets/icons/github-svgrepo-com.svg" alt="" />
+            <img src="assets/icons/github-svgrepo-com.svg" alt="" loading="lazy"/>
           </span>
           GitHub
         </a>
         <a href="https://www.linkedin.com/in/joud-aljabri-403832248/" class="hero-btn" target="_blank" rel="noreferrer">
           <span class="btn-icon linkedin-icon">
-            <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" />
+            <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" loading="lazy"/>
           </span>
           LinkedIn
         </a>
         <a href="mailto:joud.jab@gmail.com" class="hero-btn">
           <span class="btn-icon email-icon">
-            <img src="assets/icons/email-svgrepo-com.svg" alt="" />
+            <img src="assets/icons/email-svgrepo-com.svg" alt="" loading="lazy"/>
           </span>
           Email
         </a>
@@ -57,10 +57,10 @@
     </div>
 
     <!-- Decorative sparkles -->
-    <img src="assets/sparkles/pinkStar.png"     alt="" class="sparkle sp-pink-star" />
-    <img src="assets/sparkles/whiteSparkle.png" alt="" class="sparkle sp-white" />
-    <img src="assets/sparkles/yellowSun.png"    alt="" class="sparkle sp-yellow" />
-    <img src="assets/sparkles/greenSparkle.png" alt="" class="sparkle sp-green" />
+    <img src="assets/sparkles/pinkStar.png"     alt="" class="sparkle sp-pink-star" loading="lazy"/>
+    <img src="assets/sparkles/whiteSparkle.png" alt="" class="sparkle sp-white" loading="lazy"/>
+    <img src="assets/sparkles/yellowSun.png"    alt="" class="sparkle sp-yellow" loading="lazy"/>
+    <img src="assets/sparkles/greenSparkle.png" alt="" class="sparkle sp-green" loading="lazy"/>
   </section>
 
   <!-- ── Quote of the day API here ── -->
@@ -69,7 +69,7 @@
   <blockquote id="block-quote">Click to get a quote!</blockquote>
   <p id="author"></p>
   <button class= "hero-btn-quote" onclick="getQuote()">  
-    <span class="btn-icon green-sparkle"> <img src="assets/sparkles/greenSparkle.png" alt="" /> 
+    <span class="btn-icon green-sparkle"> <img src="assets/sparkles/greenSparkle.png" alt="" loading="lazy"/> 
     </span>
     New Quote</button>
 </section>
@@ -133,8 +133,8 @@
     </div>
 
     <!-- Decorative -->
-    <img src="assets/sparkles/pinkCircle.png" alt="" class="tech-dot" />
-    <img src="assets/arrows/wiggleLine.svg"   alt="" class="tech-wiggle" />
+    <img src="assets/sparkles/pinkCircle.png" alt="" class="tech-dot" loading="lazy"/>
+    <img src="assets/arrows/wiggleLine.svg"   alt="" class="tech-wiggle" loading="lazy"/>
   </section>
 
   <!-- ── Projects ── -->
@@ -144,7 +144,7 @@
 
     <div class="explore-wrapper">
       <a href="projects.html" class="explore-btn">Explore More →</a>
-      <img src="assets/arrows/arrow.svg" alt="" class="explore-arrow" />
+      <img src="assets/arrows/arrow.svg" alt="" class="explore-arrow" loading="lazy"/>
     </div>
 
     <div class="projects-grid">
@@ -168,7 +168,7 @@
           </div>
           <div class="project-links">
             <a href="https://github.com/Joudii18/Bond-app.git" class="link-btn" target="_blank" rel="noreferrer">
-              <img src="assets/icons/github-svgrepo-com.svg" alt="" /> Github
+              <img src="assets/icons/github-svgrepo-com.svg" alt="" loading="lazy"/> Github
             </a>
             <a href="https://apps.apple.com/sa/app/bond-group-habit-tracker/id6757323090" class="link-btn" target="_blank" rel="noreferrer">
               ⬇ Download iOS
@@ -180,7 +180,7 @@
       <!-- Horse Racing DB -->
       <div class="project-card horse">
         <div class="project-image">
-          <img src="assets/images/HorseDataBaseSystemView.png" alt="Horse Racing Database System screenshot" />
+          <img src="assets/images/HorseDataBaseSystemView.png" alt="Horse Racing Database System screenshot" loading="lazy"/>
         </div>
         <div class="project-body">
           <h3>Horse Riding Database System</h3>
@@ -194,7 +194,7 @@
           </div>
           <div class="project-links">
             <a href="https://github.com/Joudii18/Horse-Racing-Database-System-.git" class="link-btn" target="_blank" rel="noreferrer">
-              <img src="assets/icons/github-svgrepo-com.svg" alt="" /> Github
+              <img src="assets/icons/github-svgrepo-com.svg" alt="" loading="lazy"/> Github
             </a>
           </div>
         </div>
@@ -203,7 +203,7 @@
       <!-- Meras -->
       <div class="project-card meras">
         <div class="project-image meras-img">
-          <img src="assets/images/MerasView.png" alt="Meras screenshot" />
+          <img src="assets/images/MerasView.png" alt="Meras screenshot" loading="lazy"/>
         </div>
         <div class="project-body">
           <h3>Meras</h3>
@@ -228,6 +228,16 @@
     </div>
   </section>
 
+  <!-- ── GitHub Repos ── -->
+  <section class="github-repos" id="github">
+    <h2>Latest on GitHub</h2>
+    <p class="projects-subtitle">My 3 most recently updated public repositories.</p>
+    <div class="repos-grid" id="repos-grid">
+      <!-- Cards injected by JS -->
+      <p class="repos-loading">Loading repositories…</p>
+    </div>
+  </section>
+
   <!-- ── Contact ── -->
   <section class="contact" id="contact">
     <h2>Let's Talk!</h2>
@@ -237,7 +247,7 @@
     </p>
 
     <form class="contact-form">
-      <img src="assets/sparkles/pinkStar.png" alt="" class="form-star" />
+      <img src="assets/sparkles/pinkStar.png" alt="" class="form-star" loading="lazy"/>
       <input type="text"  placeholder="Your Name"  class="form-input" autocomplete="name" />
       <input type="email" placeholder="Your Email" class="form-input" autocomplete="email" />
       <textarea placeholder="Your Message Here" class="form-textarea" rows="6"></textarea>

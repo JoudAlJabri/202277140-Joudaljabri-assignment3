@@ -9,6 +9,7 @@ A simple, responsive personal portfolio website built as part of a web developme
 - **Tech Stack** section to display all technologies I work with classified.
 - **Projects** section displaying 3 main projects in a time-line looking grid layout
 - **Contact** section with a form (Name, Email, Message) and client-side submission feedback and validation
+- **Latest from Github** section displaying my 3 latest project from github using GitHub public API
 - **Smooth scrolling** navigation between sections
 - **Responsive design** that adapts to desktop, tablet, and mobile screen sizes
 - **Projects Page** another page that includes more projects I have with filtering feature
@@ -23,7 +24,7 @@ A simple, responsive personal portfolio website built as part of a web developme
 ## Project Structure
 
 ```
-202277140-JoudAljabri-assignment2/
+202277140-JoudAljabri-assignment3/
 ├── README.md
 ├── index.html
 ├── projects.html
@@ -61,5 +62,3 @@ AI tools were used during development to assist with specific parts of the proje
 - **Google Gemini**: Used for documentation preferences and organization, helping structure the README and technical documentation.
 
 All AI-generated code was reviewed, understood, and modified to fit the project's needs. For full details, see [docs/ai-usage-report.md](docs/ai-usage-report.md).
-# 202277140-Joudaljabri-assignment3
-# 202277140-Joudaljabri-assignment3

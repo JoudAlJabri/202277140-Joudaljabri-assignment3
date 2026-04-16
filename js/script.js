@@ -1,28 +1,46 @@
-function displayGreeting() {
+
+window.onload = function () {
+    let name = localStorage.getItem("visitorName");
+
+    // If no name saved → ask using popup
+    if (!name) {
+      name = prompt("Hi there 👋 What's your name?");
+
+      // If user entered something valid
+      if (name && name.trim() !== "") {
+        localStorage.setItem("visitorName", name);
+      } else {
+        name = "Guest"; // fallback
+      }
+    }
+
+    // Call greeting with the name now that we have it
+    displayGreeting(name);
+  };
+
+
+function displayGreeting(name) {
     // Get the greeting element
     const greetingElement = document.getElementById('hero-greeting-dyncamic');
-    
+
     // Get current hour (0-23)
     const currentHour = new Date().getHours();
-    
+
     // Variable to store our greeting message
     let greeting;
-    
+
     // Determine greeting based on time
     if (currentHour < 12) {
-        greeting = "Good Morning, I'm";
+        greeting = `Good Morning, ${name}! I'm`;
     } else if (currentHour < 18) {
-        greeting = "Good Afternoon, I'm";
+        greeting = `Good Afternoon, ${name}! I'm`;
     } else {
-        greeting = "Good Evening, I'm";
+        greeting = `Good Evening, ${name}! I'm`;
     }
-    
+
     // Display the greeting
     greetingElement.textContent = greeting;
 }
-
-// Call the greeting function when page loads
-displayGreeting();
 
 
 
@@ -118,7 +136,42 @@ document.addEventListener('submit', (e) => {
 });
 
 
-// ─── Quote of the Day 
+// ─── GitHub Repos
+async function loadGitHubRepos() {
+  const grid = document.getElementById('repos-grid');
+  if (!grid) return;
+
+  try {
+    const res = await fetch(
+      'https://api.github.com/users/Joudii18/repos?sort=updated&per_page=3'
+    );
+
+    if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
+
+    const repos = await res.json();
+
+    grid.innerHTML = repos.map(repo => `
+      <div class="repo-card">
+        <h3>${repo.name}</h3>
+        <p>${repo.description || 'No description provided.'}</p>
+        <div class="repo-meta">
+          ${repo.language ? `<span>⬡ ${repo.language}</span>` : ''}
+          <span>★ ${repo.stargazers_count}</span>
+          <span>⑂ ${repo.forks_count}</span>
+        </div>
+        <a href="${repo.html_url}" target="_blank" rel="noreferrer">View on GitHub →</a>
+      </div>
+    `).join('');
+
+  } catch (err) {
+    grid.innerHTML = '<p class="repos-error">Could not load repositories. Try again later.</p>';
+    console.error(err);
+  }
+}
+
+loadGitHubRepos();
+
+// ─── Quote of the Day
 async function getQuote() {
   try {
     const res = await fetch('https://dummyjson.com/quotes/random');
@@ -132,3 +185,6 @@ async function getQuote() {
     console.error(error);
   }
 }
+
+
+  

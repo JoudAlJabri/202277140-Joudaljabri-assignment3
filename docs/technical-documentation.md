@@ -23,14 +23,6 @@ The redesign was not just cosmetic — it involved restructuring the entire layo
 
 ---
 
-## 3. Assignment 1 Feedback — What Was Fixed
-
-| Feedback | Status |
-|---|---|
-| Nav only showed logo with no links to sections | Fixed — navbar now has Home, Projects, and Blogs links |
-| Suggested use of media queries for smaller screens | Added — responsive breakpoints at `768px`, `900px`, and `600px` |
-
----
 
 ## 4. Project Structure
 
@@ -68,6 +60,7 @@ Contains the following sections in order:
 - **About Me** — short bio and interests
 - **Tech Stack** — skills grouped into 4 cards
 - **Projects** — 3 featured project cards with a link to the full archive
+- **Latest Fromm Github NEW** — display the 3 latest project from github
 - **Contact** — validated contact form
 - **Footer**
 
@@ -114,6 +107,10 @@ A `scroll` event listener adds the class `.scrolled` to the navbar once the user
 ### 6.6 Project Filter (projects.html)
 An inline script on `projects.html` listens for clicks on the filter bar buttons. Each project card has a `data-category` attribute. When a filter button is clicked, cards that do not match are hidden with `display: none` and the active button is highlighted. The "All" filter restores all cards.
 
+
+### 6.7 Loading Github Repos
+loadGitHubRepos() fetches https://api.github.com/users/Joudii18/repos?sort=updated&per_page=3 and renders cards showing: Repo name (links to GitHub), description, language, star count, fork count, and error message if the API fails
+
 ---
 
 ## 7. CSS & Animations
@@ -149,7 +146,17 @@ Media queries handle layout changes at three breakpoints:
 
 ---
 
-## 9. External Resources Used
+## 9. Assignement 3 Requirements 
+
+-  API Integration: Both quotes and github latest repo implemented
+- Complex Logic: Create a project page  that can be filtered and sorted according to the tech stack used, including UI/UX, Web, Mobile and more.
+- Complex Logic: Adde extra checks to contact forms filling like making sure fields are not empty.
+- State Management: Added a dialog box for prompting the visisor name when they first visit the website, and stored it in localStrorage for later calling and to remember the preference.
+- Performance: Compressed `MyFrame.png` from 1.5MB to under 200KB using WebP conversion via Squoosh. Added `loading="lazy"` to all project images so off-screen images are not downloaded until the user scrolls to them, reducing initial page load time.
+
+--- 
+
+## 10. External Resources Used
 
 | Resource | Purpose |
 |---|---|

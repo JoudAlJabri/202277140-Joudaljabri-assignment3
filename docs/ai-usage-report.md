@@ -14,7 +14,7 @@
 
 ### Benefits
 - **Faster CSS development**: Writing extensive CSS for responsive layouts, animations, and theme support is time-consuming. AI assistance accelerated this process significantly, allowing more time to focus on understanding the concepts rather than writing boilerplate.
-- **Learning new APIs**: Claude Code provided guidance on using the quote API which was a new concept and my first time using APIs with web. The explanations alongside the code helped build understanding.
+- **Learning new APIs**: Claude Code provided guidance on using the quote API and NEW: GitHub API, which was a new concept and my first time using APIs with web. The explanations alongside the code helped build understanding.
 - **Better documentation structure**: Gemini helped produce well-organized documentation that follows standard conventions, making the project easier to understand for others.
 - **Better understanding of modern looking website structure**: Claude helpes a lot in teaching me what modern website elements and componenets usually use and how to code them, including the project cards, and the tags, all after I designed a full UI in Figma.
 
@@ -22,7 +22,7 @@
 - **Context limitations**: AI sometimes generated CSS that didn't perfectly match the intended design, requiring manual adjustments to colors, spacing, and breakpoints.
 - **Over-engineering**: Some AI suggestions were more complex than necessary for the assignment scope and had to be simplified.
 - **Verification needed**: All generated code had to be tested and verified to ensure it worked correctly across different screen sizes and browsers.
-- AI suggested initially broken public APIs that no longer work. So I searched for more funcationally working public ones.
+
 
 ## Learning Outcomes
 
@@ -33,6 +33,7 @@
 - Improved documentation skills by learning how to structure technical writing effectively.
 - Developed a workflow of using AI as a starting point, then reviewing and customizing the output to match specific requirements.
 - Learned the latest modern websites strucutres.
+- Learned to optimize and turn your website more efficient.
 
 ## Responsible Use & Modifications
 

@@ -622,6 +622,89 @@ body {
   margin-top: -0.5rem;
 }
 
+/* ── GitHub Repos */
+.github-repos {
+  padding: 3rem 5% 5rem;
+}
+
+.github-repos h2 {
+  font-family: var(--font);
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.repo-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.repo-card:hover {
+  border-color: var(--green);
+}
+
+.repo-card h3 {
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.repo-card p {
+  font-family: var(--font);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 1rem;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.repo-card a {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 0.3rem 0.9rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.repo-card a:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.repos-loading,
+.repos-error {
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.repos-error { color: #ff6b6b; }
+
 /*  Responsive */
 @media (max-width: 768px) {
   .navbar { padding: 1.2rem 5%; }
@@ -645,4 +728,8 @@ body {
   .bond  { grid-column: 1; grid-row: 1; }
   .horse { grid-column: 1; grid-row: 2; margin-top: 0; }
   .meras { grid-column: 1; grid-row: 3; }
+
+  .repos-grid {
+    grid-template-columns: 1fr;
+  }
 }
